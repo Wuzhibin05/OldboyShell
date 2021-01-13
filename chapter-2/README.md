@@ -211,7 +211,7 @@ bash test.sh
 
 #### 1. 执行顺序
 
-（1）先找系统变量ENV，变量环境变量文件加载顺序/etc/profile、~/.bash_profile、~/.bashrc、/etc/bashrc.
+（1）先找系统变量ENV，变量环境变量文件加载顺序**/etc/profile、~/.bash_profile、~/.bashrc、/etc/bashrc.**
 
 （2）执行脚本中的内容。
 
