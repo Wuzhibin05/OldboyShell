@@ -1,0 +1,25 @@
+.gitbook-link{
+    display: none !important;
+}
+
+.module-list-box{
+	width: 100%;
+}
+
+.module-list-table-header td{
+	font-weight: 700;
+}
+
+.white-space-nowrap{
+	white-space: nowrap;
+}
+
+.module-list-span-100{
+	width:100px;
+	display: block;
+}
+
+.module-list-span-300{
+	width:300px;
+	display: block;
+}

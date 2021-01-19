@@ -291,7 +291,7 @@ anaconda-ks.cfg gtjazglogs test tools
 
 范例 3-7：按照每天打包网站的站点目录程序，生成不同的文件名。
 
-```
+```shell
 [root@cdyf138 ~]# CMD=$(date +%F)
 [root@cdyf138 ~]# echo $CMD
 2021-01-13
@@ -301,6 +301,51 @@ anaconda-ks.cfg gtjazglogs test tools
 ```
 
 
+
+**局部变量的定义赋值的经验小结**
+
+>（**1）常规变量定义**
+>
+>- 如变量内容为连续的数字或者字符串，赋值时，变量内容两边可以不加引号，例如 a=123
+>
+>- 变量内容很多时候，**如果有空格**且希望解析内容中的变量，就加双引号，例如 a="/etc/rc.local $USER",此时输出变量会对内容中的$USER进行解析然后再输出。
+>
+>- 希望原样输出变量中的内容的时候，就用单引号引起内容进行赋值，例如：a='$USER'
+>
+>- 使用反引号将赋值的命令括起来，例如：a=``ls``或者,$() 例如：a=$(ls)
+>
+>（2）变量的输出方法如下。
+>
+>- 使用“$变量名”
+>
+>（3）变量定义技巧及注意事项
+>
+>- 注意命令变量内容前后的字符为反引号，不是单引号。
+>- 在变量钱加上$可以取到变量的值，使用echo或printf显示变量的值，如$A或者${A}，写法不一样，但是结果一样
+>- echo 等命令输出变量的时候加单引号，双引号，反引号，结果和变量定义一样子。
+>- $dbname_tname，变量后面有连续字符，用${dbname}_tname
+
+
+
+### 3.3.2 变量定义及变量输出说明
+
+- 例3-9 过滤字符串加引号
+
+```shell
+[root@cdyf138 ~]# OLDBOY=testchars
+[root@cdyf138 ~]# cat grep.log
+testchars
+oldboy
+[root@cdyf138 ~]# grep "$OLDBOY" grep.log
+testchars
+[root@cdyf138 ~]# grep '$OLDBOY' grep.log
+[root@cdyf138 ~]# grep $OLDBOY grep.log
+testchars
+```
+
+![image-20210116112857775](images/image-20210116112857775.png)
+
+sed 和grep都符合变量定义的基本规则，awk则不一样。
 
 
 
