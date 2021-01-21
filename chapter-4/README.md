@@ -2,3 +2,8 @@
 
 
 
+- [4.1 shell中特殊且重要的变量](book/4.1.md)
+- [4.2 bash shell 内置变量命令](book/4.2.md)
+- [4.3 shell变量子串知识及实践](book/4.3.md)
+- [4.4 shell 特殊扩展变量的知识实践](book/4.4.md)
+
