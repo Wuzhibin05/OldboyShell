@@ -152,7 +152,6 @@ echo "welcome to cdyf centos."
 结果
 
 ```shell
-
 WARNING! The remote SSH server rejected X11 forwarding request.
 Last login: Wed Jan 13 16:27:58 2021 from 192.168.8.56
 welcome to cdyf centos.
@@ -161,8 +160,6 @@ welcome to cdyf centos.
 
 
 ### 3.2.2 显示与取消环境变量
-
-
 
 #### 1.通过echo或者printf打印环境变量
 
@@ -353,7 +350,7 @@ sed 和grep都符合变量定义的基本规则，awk则不一样。
 
 
 
-#### 1.变量名及变量内容定义小结束
+#### 1. 变量名及变量内容定义小结束
 
 （1） 变量只能使用字母，数字及下划线定义。以下划线和字母开头。
 
