@@ -247,9 +247,34 @@ bash test.sh
 
 （1）**推荐使用 bash  test.sh  或者sh test.sh**
 
+​        不用考虑权限问题
+
+```shell
+[root@lab100 bin]# sh test.sh 
+hello
+[root@lab100 bin]# bash test.sh
+hello
+
+```
+
 （2）./test.sh或者path/test.sh
 
-（3）source test.sh
+​	脚本所在路径不在 PATH变量中，执行会找不到路径
+
+```shell
+[root@lab100 opt]# test.sh
+-bash: /usr/local/bin/test.sh: 没有那个文件或目录
+```
+
+（3）source test.sh 或者. 执行
+
+​    在其他脚本中可以引用当前脚本变量
+
+```shell
+#!/bin/bash
+source /opt/test.sh
+echo "$NAME is 32 years old."
+```
 
 
 
