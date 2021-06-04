@@ -52,7 +52,7 @@ exit 1
 
 
 
-清空文件的方法
+**清空日志三种的方法**
 
 ```shell
 cat /dev/null >message
@@ -266,9 +266,9 @@ hello
 -bash: /usr/local/bin/test.sh: 没有那个文件或目录
 ```
 
-（3）source test.sh 或者. 执行
+（3）source test.sh 或者.  test.sh执行
 
-​    在其他脚本中可以引用当前脚本变量
+​    **在其他脚本中可以引用当前脚本变量**
 
 ```shell
 #!/bin/bash
