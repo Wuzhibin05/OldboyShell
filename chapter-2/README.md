@@ -254,7 +254,6 @@ bash test.sh
 hello
 [root@lab100 bin]# bash test.sh
 hello
-
 ```
 
 （2）./test.sh或者path/test.sh
