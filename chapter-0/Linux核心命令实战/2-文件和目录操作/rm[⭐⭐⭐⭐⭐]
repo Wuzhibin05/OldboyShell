@@ -1,0 +1,48 @@
+# pwd
+
+
+
+## 命令详解
+
+【命令星级】 ⭐⭐⭐⭐⭐
+
+
+
+【功能说明】 
+
+- print working directory  打印当前工作目录的名字。
+- pwd: pwd [-LP]
+
+```tex
+选项：
+  -L	打印 $PWD 变量的值，如果它包含了当前的工作目录
+  -P	打印当前的物理路径，不带有任何的符号链接
+
+默认情况下，`pwd' 的行为和带 `-L' 选项一致
+
+退出状态：
+除非使用了无效选项或者当前目录不可读，否则返回状态为0。
+```
+
+
+
+## 示例
+
+
+
+- 示例1
+
+```shell
+[root@localhost:/opt/containerd]# pwd
+/opt/containerd
+```
+
+- 示例2
+
+```sh
+[root@localhost:/opt/containerd]# pwd -L
+/opt/containerd
+[root@localhost:/opt/containerd]# pwd -P
+/opt/containerd
+```
+

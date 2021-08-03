@@ -1,0 +1,147 @@
+# Tree
+
+
+
+## 命令详解
+
+【命令星级】 ⭐⭐⭐
+
+
+
+【功能说明】 
+
+- 打印目录树
+
+
+
+![image-20210723122641492](images/image-20210723122641492.png)
+
+【安装】
+
+```sh
+yum -y install tree
+```
+
+
+
+## 示例
+
+
+
+- 显示所有内容（-a）
+
+```shell
+[root@cdyf139 ~]# tree -a
+.
+├── anaconda-ks.cfg
+├── .ansible
+│   └── tmp
+├── .bash_history
+├── .bash_logout
+├── .bash_profile
+├── .bashrc
+├── .cshrc
+```
+
+- 显示目录层级 （-L）
+
+```sh
+[root@cdyf139 ~]# tree -a
+.
+├── anaconda-ks.cfg
+├── .ansible
+│   └── tmp
+├── .bash_history
+├── .bash_logout
+├── .bash_profile
+├── .bashrc
+├── .cshrc
+```
+
+- 只显示目录（-d）
+
+```sh
+[root@cdyf139 ~]# tree -d -L 2 /opt
+/opt
+├── application
+│   ├── koca-amo-guojun
+│   ├── koca-dashboard-amo-app
+│   ├── release
+│   ├── xta
+│   └── xta-new
+├── database
+│   ├── amo
+│   └── amo-nongshang
+├── koca
+│   └── repo
+├── tools
+│   ├── apache-maven-3.6.1
+│   ├── flyway-6.2.2-mysql
+│   ├── flyway-6.2.2-oracle
+│   ├── mvn-package
+│   ├── nacos
+│   ├── nacos-develop
+│   └── node-v14.16.1-linux-x64
+```
+
+- -f和-i 只显示树枝部分
+
+```sh
+[root@cdyf139 ~]# tree -f
+.
+├── ./anaconda-ks.cfg
+└── ./logs
+    ├── ./logs/koca-trace.log
+    └── ./logs/koca-trace.log.2021-07-22
+
+1 directory, 3 files
+[root@cdyf139 ~]# tree -f -i
+.
+./anaconda-ks.cfg
+./logs
+./logs/koca-trace.log
+./logs/koca-trace.log.2021-07-22
+
+1 directory, 3 files
+```
+
+
+
+## 技巧
+
+- 使用tree区分目录和文件的方法（常用）
+
+```sh
+[root@cdyf139 ~]# tree -L 2 -F /boot
+/boot
+├── config-3.10.0-1127.19.1.el7.x86_64
+├── config-3.10.0-1127.el7.x86_64
+├── efi/
+│   └── EFI/
+├── grub/
+│   └── splash.xpm.gz
+├── grub2/
+│   ├── device.map
+│   ├── fonts/
+│   ├── grub.cfg
+│   ├── grubenv
+│   ├── i386-pc/
+│   └── locale/
+├── initramfs-0-rescue-fe290e3fae184ca88e6c10850cfdd90a.img
+├── initramfs-3.10.0-1127.19.1.el7.x86_64.img
+├── initramfs-3.10.0-1127.19.1.el7.x86_64kdump.img
+├── initramfs-3.10.0-1127.el7.x86_64.img
+├── initramfs-3.10.0-1127.el7.x86_64kdump.img
+├── symvers-3.10.0-1127.19.1.el7.x86_64.gz
+├── symvers-3.10.0-1127.el7.x86_64.gz
+├── System.map-3.10.0-1127.19.1.el7.x86_64
+├── System.map-3.10.0-1127.el7.x86_64
+├── vmlinuz-0-rescue-fe290e3fae184ca88e6c10850cfdd90a*
+├── vmlinuz-3.10.0-1127.19.1.el7.x86_64*
+└── vmlinuz-3.10.0-1127.el7.x86_64*
+
+7 directories, 18 files
+```
+
+**-F 会在目录后面加/**
+

@@ -1,0 +1,65 @@
+# touch
+
+
+
+## 命令详解
+
+【命令星级】 ⭐⭐⭐⭐⭐
+
+
+
+【功能说明】 
+
+- make directions  创建文件夹。
+
+```tex
+选项：
+-P 递归目录及子目录，目录不存在也不会报错。
+-m 设置创建目录默认目录对应权限
+-v 显示创建目录过程
+```
+
+
+
+## 示例
+
+
+
+- 递归创建-p
+
+```shell
+mkdir -p /opt/test/abc
+```
+
+- 显示创建过程 -v
+
+```sh
+[root@localhost:/opt/containerd]# pwd -L
+/opt/containerd
+[root@localhost:/opt/containerd]# pwd -P
+/opt/containerd
+```
+
+
+
+## 技巧
+
+- 同时创建多个目录
+
+```sh
+[root@cdyf144 ~]# mkdir -pv /opt/oldboy/{bin,config}/{test1,test2}
+mkdir: 已创建目录 "/opt/oldboy"
+mkdir: 已创建目录 "/opt/oldboy/bin"
+mkdir: 已创建目录 "/opt/oldboy/bin/test1"
+mkdir: 已创建目录 "/opt/oldboy/bin/test2"
+mkdir: 已创建目录 "/opt/oldboy/config"
+mkdir: 已创建目录 "/opt/oldboy/config/test1"
+mkdir: 已创建目录 "/opt/oldboy/config/test2"
+```
+
+- 克隆目录
+
+```
+
+```
+
