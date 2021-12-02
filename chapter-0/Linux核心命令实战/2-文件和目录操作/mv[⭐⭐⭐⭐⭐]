@@ -10,18 +10,21 @@
 
 【功能说明】 
 
-- print working directory  打印当前工作目录的名字。
-- pwd: pwd [-LP]
+- 移动文件
+- 重命名
 
-```tex
-选项：
-  -L	打印 $PWD 变量的值，如果它包含了当前的工作目录
-  -P	打印当前的物理路径，不带有任何的符号链接
+```shell
+Usage: mv [OPTION]... [-T] SOURCE DEST
+  or:  mv [OPTION]... SOURCE... DIRECTORY
+  or:  mv [OPTION]... -t DIRECTORY SOURCE...
+Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
 
-默认情况下，`pwd' 的行为和带 `-L' 选项一致
-
-退出状态：
-除非使用了无效选项或者当前目录不可读，否则返回状态为0。
+Mandatory arguments to long options are mandatory for short options too.
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+  -f, --force                  do not prompt before overwriting
+  -i, --interactive            prompt before overwrite
+  -n, --no-clobber             do not overwrite an existing file
 ```
 
 
